@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>                        
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>   
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://hadoop:9000</value>
+      </property>
+    <property>
+         <name>tez.lib.uris</name>
+         <value>${fs.defaultFS}/apps/tez/,${fs.default.name}/apps/tez/lib</value>
+    </property>
+    <property>
+         <name>tez.use.cluster.hadoop-libs</name>
+         <value>true</value>
+    </property>
+
+    <property>
+      <description>Enable Tez to use the Timeline Server for History Logging</description>
+      <name>tez.history.logging.service.class</name>
+      <value>org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService</value>
+    </property>
+
+    <property>
+      <description>URL for where the Tez UI is hosted</description>
+      <name>tez.tez-ui.history-url.base</name>
+      <value>http://hadoop:9999/tez-ui/</value>
+    </property>
+</configuration>

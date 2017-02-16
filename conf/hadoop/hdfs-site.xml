@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>                        
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>   
+<configuration>
+  <property>
+    <name>dfs.name.dir</name>
+    <value>/opt/hadoop/data</value>
+  </property>
+  <property>
+    <name>dfs.replicationr</name>
+    <value>1</value>
+  </property>
+</configuration>
